@@ -20,9 +20,11 @@ app.get('/', (req, res) => {
 
 
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', {
+        nombre: 'eduardo ramirez camacho'
+    });
 });
 
-app.listen(port, () => {
+app.listen(3000, () => {
     console.log(`Escuchando peticiones en el puerto ${port} `);
 });
